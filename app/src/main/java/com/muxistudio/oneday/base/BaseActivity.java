@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.muxistudio.oneday.event.EventClass;
 import com.muxistudio.oneday.util.L;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by fengminchao on 17/11/18
@@ -57,5 +60,10 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     public boolean isNeedEventBus(){
         return true;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(EventClass.EmptyEvent event){
+
     }
 }

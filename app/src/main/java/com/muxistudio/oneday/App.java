@@ -3,7 +3,6 @@ package com.muxistudio.oneday;
 import android.app.Application;
 import android.content.Context;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.muxistudio.oneday.db.DaoMaster;
 import com.muxistudio.oneday.db.DaoSession;
 
@@ -25,7 +24,6 @@ public class App extends Application{
         DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this,"diary.db");
         Database db = devOpenHelper.getWritableDb();
         sDaoSession = new DaoMaster(db).newSession();
-        Fresco.initialize(this);
 
     }
 

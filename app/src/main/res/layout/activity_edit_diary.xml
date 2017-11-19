@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar_layout"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Nov.12 "
+            android:textColor="@color/textColorAccent"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:src="@drawable/ic_clear_black_24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_done"
+            android:src="@drawable/ic_done_black_24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_title"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_text_num"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/colorAccent"
+            android:textColor="#ffffff"
+            tools:text="fsfs"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_text_num"
+            android:layout_alignParentBottom="true"
+            tools:text="8/20"
+            android:textColor="@color/textColorAccent"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="1.你今天开心吗？"
+                android:layout_height="wrap_content"/>
+
+            <com.muxistudio.oneday.ui.main.view.SelectedLayout
+                android:id="@+id/layout_first_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="2.你觉得你今天有充分利用时间吗？"
+                android:layout_height="wrap_content"/>
+
+            <com.muxistudio.oneday.ui.main.view.SelectedLayout
+                android:id="@+id/layout_second_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="3.满分10分，你给今天的自己打多少分？"
+                android:layout_height="wrap_content"/>
+
+            <com.muxistudio.oneday.ui.main.view.SelectedLayout
+                android:id="@+id/layout_third_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="4.今天给自己布置的任务都完成了吗？"
+                android:layout_height="wrap_content"/>
+
+            <com.muxistudio.oneday.ui.main.view.SelectedLayout
+                android:id="@+id/layout_four_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="速记"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_note1"
+                android:layout_width="match_parent"
+                android:hint="1."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_note2"
+                android:layout_width="match_parent"
+                android:hint="2."
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/et_note3"
+                android:layout_width="match_parent"
+                android:hint="3."
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
